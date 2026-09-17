@@ -1,11 +1,13 @@
 def reverse_an_integer(num):
+    reversed = 0
 
-    string = str(num)
-    reversed = ""
+    while num > 0:
+        digits = num%10
+        reversed = (reversed * 10) + digits
+        num //= 10
 
-    for _ in string:
-        reversed += string[len(string)-1]
-        reversed = string
+    print(reversed)
 
-    print(int(reversed))
-reverse_an_integer(12345)
+reverse_an_integer(1234)
+
+        
